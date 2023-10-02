@@ -1,15 +1,16 @@
+import { Provider } from "react-redux";
 import { ThemeProvider } from "@mui/material/styles";
+
 import Home from "./pages/Home";
-import { createTheme } from "./theme";
+import { store } from "./store";
+import { theme } from "../config";
 
 function App() {
-  const theme = createTheme({
-    colorPreset: "indigo",
-    contrast: "normal",
-  });
   return (
     <ThemeProvider theme={theme}>
-      <Home />
+      <Provider store={store}>
+        <Home />
+      </Provider>
     </ThemeProvider>
   );
 }

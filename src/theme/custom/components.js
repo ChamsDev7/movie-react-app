@@ -109,7 +109,6 @@ export const createComponents = ({ palette }) => {
             backgroundColor: "transparent",
             [`& .${outlinedInputClasses.notchedOutline}`]: {
               borderColor: palette.primary.main,
-              boxShadow: `${palette.primary.main} 0 0 0 2px`,
             },
           },
           [`&.${filledInputClasses.error}`]: {

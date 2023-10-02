@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Header = ({ title }) => {
   return (
-    <Typography variant="h5" color="textPrimary">
+    <Typography variant="h4" color="textPrimary">
       {title}
     </Typography>
   );

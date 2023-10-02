@@ -1,10 +1,4 @@
-import {
-  FormControl,
-  InputLabel,
-  MenuItem,
-  OutlinedInput,
-  Select,
-} from "@mui/material";
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import PropTypes from "prop-types";
 import { categories } from "../data/categories";
 
@@ -12,14 +6,13 @@ const Filter = ({ selectedCategories, handleCategoryChange }) => {
   return (
     <>
       <FormControl fullWidth>
-        <InputLabel id="demo-multiple-name-label">Category</InputLabel>
+        <InputLabel id="demo-simple-select-label">Category</InputLabel>
         <Select
-          labelId="demo-multiple-name-label"
-          fullWidth
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
           multiple
+          label="Category"
           name="category"
-          variant="outlined"
-          input={<OutlinedInput label="Category" />}
           onChange={handleCategoryChange}
           value={selectedCategories}
         >
